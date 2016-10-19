@@ -1,0 +1,53 @@
+{
+  "name": "@6pm/emit",
+  "version": "1.0.0",
+  "author": "James Andrews <jka6510@gmail.com>",
+  "description": "Screaming fast event emitter, with Symbol support",
+  "keywords": [
+    "event",
+    "emitter"
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --require babel-core/register test/**/*.spec.js",
+    "cover": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- test/**/*.spec.js",
+    "coveralls": "./node_modules/.bin/babel-node  ./node_modules/.bin/babel-istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "prepublish": "grunt build"
+  },
+  "main": "dist/emit.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-istanbul": "^0.11.0",
+    "babel-plugin-external-helpers": "^6.8.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.12.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "mocha": "^2.5.3",
+    "should": "^10.0.0",
+    "systemjs": "^0.19.29"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "babel": {
+    "sourceMaps": "both",
+	"moduleId": "@6pm/emit",
+    "presets": [],
+    "plugins": [
+	   ["babel-plugin-transform-es2015-modules-umd", {
+		   "exactGlobals": true,
+		   "globals": {
+			   "@6pm/emit": "sixpm.emit"
+		   }
+	   }]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/6pm-js/emit.git"
+  },
+  "license": "MIT"
+}

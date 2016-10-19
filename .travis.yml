@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "6.x"
+
+script:
+  - ./node_modules/.bin/mocha
+  - npm run coveralls
+
+addons:
+  sauce_connect:
+    username: "6pm-js"
+    access_key: "ec25ed10-91c3-4e14-8f76-0ec92603b664"
