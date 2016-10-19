@@ -18,6 +18,7 @@
     "node": ">=4"
   },
   "devDependencies": {
+    "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
     "babel-istanbul": "^0.11.0",
     "babel-plugin-external-helpers": "^6.8.0",
@@ -34,15 +35,18 @@
   },
   "babel": {
     "sourceMaps": "both",
-	"moduleId": "@6pm/emit",
+    "moduleId": "@6pm/emit",
     "presets": [],
     "plugins": [
-	   ["babel-plugin-transform-es2015-modules-umd", {
-		   "exactGlobals": true,
-		   "globals": {
-			   "@6pm/emit": "sixpm.emit"
-		   }
-	   }]
+      [
+        "babel-plugin-transform-es2015-modules-umd",
+        {
+          "exactGlobals": true,
+          "globals": {
+            "@6pm/emit": "sixpm.emit"
+          }
+        }
+      ]
     ]
   },
   "repository": {
