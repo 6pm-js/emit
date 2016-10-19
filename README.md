@@ -1,6 +1,6 @@
 # 6pm/emit
 
-[![Version npm](https://img.shields.io/npm/v/@6pm/emit.svg)](https://www.npmjs.com/package/@6pm/emit) [![Build Status](https://img.shields.io/travis/6pm-js/emit/master.svg)](https://travis-ci.org/@6pm-js/emit) [![Coverage Status](https://img.shields.io/coveralls/@6pm-js/emit/master.svg)](https://coveralls.io/github/6pm-js/emit?branch=master)
+[![Version npm](https://img.shields.io/npm/v/@6pm/emit.svg)](https://www.npmjs.com/package/@6pm/emit) [![Build Status](https://img.shields.io/travis/6pm-js/emit/master.svg)](https://travis-ci.org/6pm-js/emit) [![Coverage Status](https://img.shields.io/coveralls/6pm-js/emit/master.svg)](https://coveralls.io/github/6pm-js/emit?branch=master)
 
 A zero dependency event emitter with lazy initialisation, zero memory and cpu
 initial state, and full support for `Symbol` event types!
